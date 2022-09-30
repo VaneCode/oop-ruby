@@ -24,7 +24,7 @@ class Animal
   attr_reader :type, :number_of_legs
 
   def speak
-    "grrrr"
+    'grrrr'
   end
 end
 
