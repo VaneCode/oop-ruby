@@ -1,10 +1,15 @@
 class Animal
-  def initialize
-    @id = Random.rand(1..1000)
-    @name = 'Rex'
-    @number_of_legs = 4
+    def initialize(name, number_of_legs)
+      @id = Random.rand(1..1000)
+      @name = name
+      @number_of_legs = number_of_legs
+    end
   end
-end
+  
+  animal_1 = Animal.new("Rex", 4)
+  animal_2 = Animal.new("Bob", 8)
+  
 
-animal_1 = Animal.new
-animal_2 = Animal.new
+  p animal_1
+  p animal_2
+
