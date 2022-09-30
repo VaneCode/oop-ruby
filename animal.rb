@@ -27,9 +27,3 @@ class Animal
     'grrrr'
   end
 end
-
-animal1 = Animal.new('cat', 4, 'Rex')
-animal2 = Animal.new('dog', 4, 'Rag')
-
-p animal1.speak
-p animal2.speak
