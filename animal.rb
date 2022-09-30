@@ -24,14 +24,7 @@ class Animal
   attr_reader :type, :number_of_legs
 
   def speak
-    case @type
-    when 'dog'
-      'Woof, woof'
-    when 'cat'
-      'Meow, meow'
-    when 'spider'
-      '...'
-    end
+    "grrrr"
   end
 end
 
