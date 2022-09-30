@@ -6,19 +6,35 @@ class Animal
     @type = type
   end
 
-  attr_reader :id, :type, :number_of_legs
+  # Shortcut of getter method
+  # def id
+  #  @id
+  # end
+  attr_reader :id
 
+  # Shortcut of getter and setter method
+  # def name
+  #  @name
+  # end
+  # def name(name)
+  #  @name = name
+  # end
   attr_accessor :name
 
-  # setter
+  attr_reader :type, :number_of_legs
 
   def speak
-    p "My name is #{@name}, and I can speak!"
+    case @type
+    when 'dog'
+      'Woof, woof'
+    when 'cat'
+      'Meow, meow'
+    end
   end
 end
 
-animal1 = Animal.new(4, 'Rex')
-animal2 = Animal.new(8, 'Rag')
+animal1 = Animal.new('cat', 4, 'Rex')
+animal2 = Animal.new('dog', 4, 'Rag')
 
-animal1.speak
-animal2.speak
+p animal1.speak
+p animal2.speak
