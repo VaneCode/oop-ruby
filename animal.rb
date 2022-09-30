@@ -29,6 +29,8 @@ class Animal
       'Woof, woof'
     when 'cat'
       'Meow, meow'
+    when 'spider'
+      '...'
     end
   end
 end
