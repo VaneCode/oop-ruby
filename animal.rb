@@ -6,6 +6,12 @@ class Animal
     @type = type
   end
 
+  attr_reader :id, :type, :number_of_legs
+
+  attr_accessor :name
+
+  # setter
+
   def speak
     p "My name is #{@name}, and I can speak!"
   end
