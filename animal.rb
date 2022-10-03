@@ -36,6 +36,6 @@ class Animal
   end
 
   def likes_food?(food)
-    @liked_food.is_liked?(food)
+    @liked_food.liked?(food)
   end
 end
