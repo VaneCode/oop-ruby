@@ -41,4 +41,9 @@ class Animal
   def likes_food?(food)
     @liked_food.liked?(food)
   end
+
+  def owner=(owner)
+    @owner = owner
+    owner.animals.push(self) unless owner.animals.include?(self)
+  end
 end
