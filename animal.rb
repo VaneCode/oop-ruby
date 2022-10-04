@@ -18,8 +18,8 @@ class Animal
 
   attr_reader :type, :number_of_legs
 
-  # Assosiation relationship Animals belongs to Owner
-  attr_reader :owner
+  # Assosiation relationship Animals belongs to Owner, Animals have visits
+  attr_reader :owner, :visits
 
   def initialize(type, number_of_legs, name = 'Unknown')
     @id = Random.rand(1..1000)
@@ -27,6 +27,7 @@ class Animal
     @number_of_legs = number_of_legs
     @type = type
     @liked_food = NoFood.new
+    @visits = []
   end
 
   def speak
