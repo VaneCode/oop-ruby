@@ -19,7 +19,7 @@ class Animal
   attr_reader :type, :number_of_legs
 
   # Assosiation relationship Animals belongs to Owner
-  attr_accessor :owner
+  attr_reader :owner
 
   def initialize(type, number_of_legs, name = 'Unknown')
     @id = Random.rand(1..1000)
