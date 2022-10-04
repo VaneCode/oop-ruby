@@ -44,3 +44,12 @@ p alex.animals.map(&:name)
 p alex.animals.count
 p alex.animals.first.name
 p alex.animals.first.number_of_legs
+
+# Try add owner to an animal
+# p alex.animals.last.owner.name
+# p animal.owner
+animal.owner = alex
+p animal.owner
+p animal.owner.name
+
+p alex.animals.last.owner.name
