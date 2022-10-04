@@ -1,14 +1,6 @@
 require './remover'
 require './foods'
 class Animal
-  def initialize(type, number_of_legs, name = 'Unknown')
-    @id = Random.rand(1..1000)
-    @name = name
-    @number_of_legs = number_of_legs
-    @type = type
-    @liked_food = NoFood.new
-  end
-
   # Shortcut of getter method
   # def id
   #  @id
@@ -25,6 +17,17 @@ class Animal
   attr_accessor :name
 
   attr_reader :type, :number_of_legs
+
+  # Assosiation relationship Animals belongs to Owner
+  attr_accessor :owner
+
+  def initialize(type, number_of_legs, name = 'Unknown')
+    @id = Random.rand(1..1000)
+    @name = name
+    @number_of_legs = number_of_legs
+    @type = type
+    @liked_food = NoFood.new
+  end
 
   def speak
     'grrrr'
