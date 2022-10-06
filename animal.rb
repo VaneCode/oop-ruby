@@ -1,30 +1,21 @@
 require './remover'
 require './foods'
 class Animal
+  # Getter and setters
+  attr_reader :id
+  attr_accessor :name
+  attr_reader :type, :number_of_legs
+  # Assosiation relationship Animals belongs to Owner, Animals have visits
+  attr_reader :owner, :visits
+
   def initialize(type, number_of_legs, name = 'Unknown')
     @id = Random.rand(1..1000)
     @name = name
     @number_of_legs = number_of_legs
     @type = type
     @liked_food = NoFood.new
+    @visits = []
   end
-
-  # Shortcut of getter method
-  # def id
-  #  @id
-  # end
-  attr_reader :id
-
-  # Shortcut of getter and setter method
-  # def name
-  #  @name
-  # end
-  # def name(name)
-  #  @name = name
-  # end
-  attr_accessor :name
-
-  attr_reader :type, :number_of_legs
 
   def speak
     'grrrr'
@@ -37,5 +28,10 @@ class Animal
 
   def likes_food?(food)
     @liked_food.liked?(food)
+  end
+
+  def owner=(owner)
+    @owner = owner
+    owner.animals.push(self) unless owner.animals.include?(self)
   end
 end
