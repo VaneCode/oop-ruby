@@ -1,23 +1,10 @@
 require './remover'
 require './foods'
 class Animal
-  # Shortcut of getter method
-  # def id
-  #  @id
-  # end
+  # Getter and setters
   attr_reader :id
-
-  # Shortcut of getter and setter method
-  # def name
-  #  @name
-  # end
-  # def name(name)
-  #  @name = name
-  # end
   attr_accessor :name
-
   attr_reader :type, :number_of_legs
-
   # Assosiation relationship Animals belongs to Owner, Animals have visits
   attr_reader :owner, :visits
 
